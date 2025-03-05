@@ -1,5 +1,6 @@
 import Layout from "@/components/layout";
-import ProjectSection from "@/components/project-section";
+import AboutSection from "@/sections/about";
+import ProjectSection from "@/sections/projects";
 import * as React from "react";
 
 interface IHomeProps {}
@@ -9,6 +10,7 @@ const Home: React.FunctionComponent<IHomeProps> = (props) => {
     <Layout>
       <div>Home</div>
       <ProjectSection />
+      <AboutSection />
     </Layout>
   );
 };

@@ -3,6 +3,7 @@ import projects from "@/assets/projects.json";
 import { Button } from "@/components/ui/button";
 import { ExternalLinkIcon } from "lucide-react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import SectionHeader from "@/sections/header";
 
 interface IProjectSectionProps {}
 
@@ -10,28 +11,19 @@ const ProjectSection: React.FunctionComponent<IProjectSectionProps> = (props) =>
   return (
     <div className="pb-16 mt-30 lg:py-24 lg:relative">
       <div>
-        <div className="flex justify-center">
-          <p className="uppercase font-semibold tracking-widest text-center bg-gradient-to-r from-[#254a7b] to-[#5693d9] dark:bg-gradient-to-r dark:from-[#6496d8] dark:to-[#adc8e8] text-transparent bg-clip-text">
-            Projects launched online
-          </p>
-        </div>
-        <h2 className="text-3xl text-center mt-5 md:text-5xl">Highlighted Work</h2>
-        <p className="text-center text-foreground/60 mt-4 md:text-lg lg:text-xl max-w-md mx-auto">
-          Explore how I’ve turned ideas into captivating digital solutions.
-        </p>
-
+        <SectionHeader header="Projects launched online" title="Highlighted Work" description="Explore how I’ve turned ideas into captivating digital solutions." />
         <div className="flex flex-col mt-10 gap-20 m-8 md:mt-20 lg:w-full lg:[&>div:nth-child(odd)>div]:left-40 lg:[&>div:nth-child(even)>div]:right-40 lg:[&>div:nth-child(odd)>div]:text-left lg:[&>div:nth-child(even)>div]:text-right lg:[&>div:nth-child(odd)>a>img]:right-40 lg:[&>div:nth-child(even)>a>img]:left-40 lg:[&>div:nth-child(even)>div>div>div>div>a]:right-8">
           {projects.slice(0, 3).map((project) => {
             return (
-              <div key={project.title} className="relative bg-background lg:flex lg:mb-100">
+              <div key={project.title} className="relative bg-background lg:flex lg:mb-90">
                 <a href={project.link} target="_blank">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="hidden absolute cursor-pointer lg:block max-w-lg top-10 opacity-70 lg:fill-accent hover:opacity-100 transition-all duration-300"
+                    className="hidden absolute rounded-xl drop-shadow-2xl cursor-pointer lg:block max-w-lg top-10 opacity-70 lg:fill-accent hover:opacity-100 transition-all duration-300"
                   />
                 </a>
-                <div className="lg:absolute lg:w-xl bg-background rounded-xl lg:mt-25">
+                <div className="lg:absolute lg:w-xl bg-background rounded-xl lg:mt-25 drop-shadow-2xl">
                   <Card className="relative p-8 bg-secondary/20 md:pt-12 md:px-10 md:pb-0 lg:pt-0 lg:pb-4">
                     <CardHeader className="px-0 lg:absolute lg:-top-20 lg:block lg:w-full lg:pr-20">
                       <CardDescription>
@@ -63,7 +55,7 @@ const ProjectSection: React.FunctionComponent<IProjectSectionProps> = (props) =>
                         </Button>
                       </a>
                       <div className="mt-8 lg:hidden">
-                        <img src={project.image} alt={project.title} className="" />
+                        <img src={project.image} alt={project.title} className="rounded-2xl" />
                       </div>
                       <div className="hidden lg:flex hover:text-ring">
                         <a href={project.link} target="_blank" className="absolute -bottom-10">
