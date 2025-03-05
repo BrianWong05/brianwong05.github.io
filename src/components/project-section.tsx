@@ -20,17 +20,19 @@ const ProjectSection: React.FunctionComponent<IProjectSectionProps> = (props) =>
           Explore how I’ve turned ideas into captivating digital solutions.
         </p>
 
-        <div className="flex flex-col mt-10 gap-20 m-8 md:mt-20 lg:w-full lg:[&>div:nth-child(odd)>div]:left-20 lg:[&>div:nth-child(even)>div]:right-20 lg:[&>div:nth-child(odd)>div]:text-left lg:[&>div:nth-child(even)>div]:text-right lg:[&>div:nth-child(odd)>img]:right-20 lg:[&>div:nth-child(even)>img]:left-20">
+        <div className="flex flex-col mt-10 gap-20 m-8 md:mt-20 lg:w-full lg:[&>div:nth-child(odd)>div]:left-40 lg:[&>div:nth-child(even)>div]:right-40 lg:[&>div:nth-child(odd)>div]:text-left lg:[&>div:nth-child(even)>div]:text-right lg:[&>div:nth-child(odd)>a>img]:right-40 lg:[&>div:nth-child(even)>a>img]:left-40 lg:[&>div:nth-child(even)>div>div>div>div>a]:right-8">
           {projects.slice(0, 3).map((project) => {
             return (
               <div key={project.title} className="relative bg-background lg:flex lg:mb-100">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="hidden absolute lg:block max-w-lg top-10 opacity-70 hover:opacity-100 transition-all duration-300"
-                />
+                <a href={project.link} target="_blank">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="hidden absolute cursor-pointer lg:block max-w-lg top-10 opacity-70 lg:fill-accent hover:opacity-100 transition-all duration-300"
+                  />
+                </a>
                 <div className="lg:absolute lg:w-xl bg-background rounded-xl lg:mt-25">
-                  <Card className="relative p-8 bg-secondary/20 md:pt-12 md:px-10 md:pb-0">
+                  <Card className="relative p-8 bg-secondary/20 md:pt-12 md:px-10 md:pb-0 lg:pt-0 lg:pb-4">
                     <CardHeader className="px-0 lg:absolute lg:-top-20 lg:block lg:w-full lg:pr-20">
                       <CardDescription>
                         <div className="gap-2 bg-gradient-to-r from-[#254a7b] to-[#5693d9] dark:bg-gradient-to-r dark:from-[#6496d8] dark:to-[#adc8e8] text-transparent bg-clip-text inline-flex font-bold uppercase tracking-widest text-sm">
@@ -55,13 +57,18 @@ const ProjectSection: React.FunctionComponent<IProjectSectionProps> = (props) =>
                         })}
                       </ul>
                       <a href={project.link} target="_blank">
-                        <Button className="h-12 w-full rounded-xl font-semibold inline-flex gap-2 mt-8 md:w-50">
+                        <Button className="h-12 w-full rounded-xl font-semibold inline-flex gap-2 mt-8 md:w-50 lg:hidden cursor-pointer transition-all duration-200">
                           <span>View Live Site</span>
                           <ExternalLinkIcon className="size-4" />
                         </Button>
                       </a>
                       <div className="mt-8 lg:hidden">
                         <img src={project.image} alt={project.title} className="" />
+                      </div>
+                      <div className="hidden lg:flex hover:text-ring">
+                        <a href={project.link} target="_blank" className="absolute -bottom-10">
+                          <ExternalLinkIcon className="size-6" />
+                        </a>
                       </div>
                     </CardContent>
                     {/* <CardFooter className="px-0">
