@@ -96,6 +96,6 @@
     @apply bg-background text-foreground;
   }
   .nav-item {
-    @apply px-4 py-1.5 rounded-full text-primary-foreground/70 text-sm font-semibold hover:text-primary-foreground hover:bg-primary-foreground/10 transition duration-250;
+    @apply px-4 py-1.5 rounded-full text-primary-foreground/70 text-base font-semibold hover:text-primary-foreground hover:bg-primary-foreground/10 transition duration-250;
   }
 }
