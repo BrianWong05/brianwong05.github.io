@@ -7,6 +7,7 @@ import TsIcon from "@/assets/icons/typescript.svg";
 import CIcon from "@/assets/icons/c.svg";
 import CppIcon from "@/assets/icons/cpp.svg";
 import PythonIcon from "@/assets/icons/python.svg";
+import FigmaIcon from "@/assets/icons/figma.svg";
 
 export const toolboxItems = [
   {
@@ -44,5 +45,9 @@ export const toolboxItems = [
   {
     title: "Python",
     icon: PythonIcon,
+  },
+  {
+    title: "Figma",
+    icon: FigmaIcon,
   },
 ];
