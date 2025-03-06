@@ -16,7 +16,7 @@ const ProjectSection: React.FunctionComponent<IProjectSectionProps> = (props) =>
           title="Highlighted Work"
           description="Explore how I’ve turned ideas into captivating digital solutions."
         />
-        <div className="flex flex-col mt-10 gap-20 m-8 md:mt-20 lg:w-full xl:w-330 xl:mx-auto lg:[&>div:nth-child(odd)>div]:left-30 lg:[&>div:nth-child(even)>div]:right-30 lg:[&>div:nth-child(odd)>div]:text-left lg:[&>div:nth-child(even)>div]:text-right lg:[&>div:nth-child(odd)>a>img]:right-30 lg:[&>div:nth-child(even)>a>img]:left-30 lg:[&>div:nth-child(even)>div>div>div>div>a]:right-8">
+        <div className="flex flex-col mt-10 gap-20 m-8 md:mx-0 md:mt-20 lg:w-full xl:w-330 xl:mx-auto lg:[&>div:nth-child(odd)>div]:left-30 lg:[&>div:nth-child(even)>div]:right-30 lg:[&>div:nth-child(odd)>div]:text-left lg:[&>div:nth-child(even)>div]:text-right lg:[&>div:nth-child(odd)>a>img]:right-30 lg:[&>div:nth-child(even)>a>img]:left-30 lg:[&>div:nth-child(even)>div>div>div>div>a]:right-8">
           {projectList.slice(0, 3).map((project) => {
             return (
               <div key={project.title} className="relative bg-background lg:flex lg:mb-90">
@@ -28,7 +28,7 @@ const ProjectSection: React.FunctionComponent<IProjectSectionProps> = (props) =>
                   />
                 </a>
                 <div className="lg:absolute lg:w-xl bg-background rounded-xl lg:mt-25 drop-shadow-2xl">
-                  <Card className="relative p-8 bg-secondary/20 md:pt-12 md:px-10 md:pb-0 lg:pt-0 lg:pb-4">
+                  <Card className="lg:relative p-8 bg-secondary/20 md:pt-12 md:px-10 md:pb-0 lg:pt-0 lg:pb-4">
                     <CardHeader className="px-0 lg:absolute lg:-top-20 lg:block lg:w-full lg:pr-20">
                       <CardDescription>
                         <div className="gap-2 bg-gradient-to-r from-[#254a7b] to-[#5693d9] dark:bg-gradient-to-r dark:from-[#6496d8] dark:to-[#adc8e8] text-transparent bg-clip-text inline-flex font-bold uppercase tracking-widest text-sm">

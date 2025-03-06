@@ -6,7 +6,7 @@ interface ILayoutProps {}
 
 const Layout: React.FunctionComponent<ILayoutProps> = ({ children }) => {
   return (
-    <div className="overflow-clip">
+    <div className="">
       <Header />
       {children}
       <Footer />

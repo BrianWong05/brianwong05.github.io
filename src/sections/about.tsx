@@ -43,8 +43,8 @@ const AboutSection: React.FunctionComponent<IAboutSectionProps> = (props: IAbout
             </CardHeader>
             <CardContent className="p-0 -mt-6">
               <div>
-                <ToolboxItems className="mt-6" />
-                <ToolboxItems className="mt-6" itemWrapperClassName="-translate-x-1/2" />
+                <ToolboxItems className="mt-6 overflow-x-clip" />
+                <ToolboxItems className="mt-6 overflow-x-clip" itemWrapperClassName="-translate-x-1/2" />
               </div>
             </CardContent>
           </Card>
