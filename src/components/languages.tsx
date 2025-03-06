@@ -1,4 +1,5 @@
 import * as React from "react";
+import { ReactTyped } from "react-typed";
 
 interface ILanguagesProps {}
 
@@ -23,6 +24,7 @@ const languages = [
 
 const Languages: React.FunctionComponent<ILanguagesProps> = (props) => {
   const [display, setDisplay] = React.useState("Hello, I am Brian Wong.");
+  console.log(display);
   return (
     <div>
       <nav className="flex justify-center items-center gap-4 lg:gap-6 w-full flex-wrap">
@@ -41,7 +43,7 @@ const Languages: React.FunctionComponent<ILanguagesProps> = (props) => {
         })}
       </nav>
       <div className="p-6 flex">
-        <span className="">{display}</span>
+        <ReactTyped strings={[display]} typeSpeed={60} />
       </div>
     </div>
   );

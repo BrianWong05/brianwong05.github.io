@@ -9,7 +9,7 @@ interface IHomeProps {}
 const Home: React.FunctionComponent<IHomeProps> = (props) => {
   return (
     <Layout>
-      <div>Home</div>
+      {/* <div>Home</div> */}
       <ProjectSection />
       <AboutSection />
       <ContactSection />
