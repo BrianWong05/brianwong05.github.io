@@ -1,5 +1,5 @@
 import * as React from "react";
-import projects from "@/assets/projects.json";
+import { projectList } from "@/assets/projectList";
 import { Button } from "@/components/ui/button";
 import { ExternalLinkIcon } from "lucide-react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -11,9 +11,13 @@ const ProjectSection: React.FunctionComponent<IProjectSectionProps> = (props) =>
   return (
     <div className="pb-16 mt-30 lg:py-24 lg:relative">
       <div>
-        <SectionHeader header="Projects launched online" title="Highlighted Work" description="Explore how I’ve turned ideas into captivating digital solutions." />
+        <SectionHeader
+          header="Projects launched online"
+          title="Highlighted Work"
+          description="Explore how I’ve turned ideas into captivating digital solutions."
+        />
         <div className="flex flex-col mt-10 gap-20 m-8 md:mt-20 lg:w-full lg:[&>div:nth-child(odd)>div]:left-40 lg:[&>div:nth-child(even)>div]:right-40 lg:[&>div:nth-child(odd)>div]:text-left lg:[&>div:nth-child(even)>div]:text-right lg:[&>div:nth-child(odd)>a>img]:right-40 lg:[&>div:nth-child(even)>a>img]:left-40 lg:[&>div:nth-child(even)>div>div>div>div>a]:right-8">
-          {projects.slice(0, 3).map((project) => {
+          {projectList.slice(0, 3).map((project) => {
             return (
               <div key={project.title} className="relative bg-background lg:flex lg:mb-90">
                 <a href={project.link} target="_blank">
