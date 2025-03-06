@@ -2,12 +2,10 @@ import * as React from "react";
 import { projectList } from "@/assets/projectList";
 import { Button } from "@/components/ui/button";
 import { ExternalLinkIcon } from "lucide-react";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import SectionHeader from "@/sections/header";
 
-interface IProjectSectionProps {}
-
-const ProjectSection: React.FunctionComponent<IProjectSectionProps> = (props) => {
+const ProjectSection: React.FunctionComponent = () => {
   return (
     <div className="pb-16 mt-30 lg:py-24 lg:relative">
       <div>

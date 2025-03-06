@@ -2,11 +2,13 @@ import * as React from "react";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 
-interface ILayoutProps {}
+interface ILayoutProps {
+  children: React.ReactNode;
+}
 
 const Layout: React.FunctionComponent<ILayoutProps> = ({ children }) => {
   return (
-    <div className="">
+    <div>
       <Header />
       {children}
       <Footer />

@@ -3,27 +3,25 @@ import GithubIcon from "@/assets/icons/github.svg";
 import LinkedInIcon from "@/assets/icons/linkedin.svg";
 import InstaIcon from "@/assets/icons/instagram.svg";
 
-interface IFooterProps {}
-
 const footerLinks = [
   {
     title: "Github",
     icon: GithubIcon,
-    href: "#",
+    href: "https://github.com/BrianWong05",
   },
   {
     title: "Instagram",
     icon: InstaIcon,
-    href: "#",
+    href: "https://www.instagram.com/tiniao_brian/",
   },
   {
     title: "LinkedIn",
     icon: LinkedInIcon,
-    href: "#",
+    href: "https://www.linkedin.com/in/tiniaowong/",
   },
 ];
 
-const Footer: React.FunctionComponent<IFooterProps> = (props) => {
+const Footer: React.FunctionComponent = () => {
   return (
     <footer className="relative overflow-x-clip">
       <div>
@@ -33,7 +31,7 @@ const Footer: React.FunctionComponent<IFooterProps> = (props) => {
           <nav className="flex flex-col md:flex-row items-center gap-8 z-10">
             {footerLinks.map((item) => {
               return (
-                <a href={item.href} key={item.title} className="inline-flex items-center gap-2">
+                <a href={item.href} target="_blank" key={item.title} className="inline-flex items-center gap-2">
                   <img src={item.icon} className="size-10" />
                   <span className="font-semibold">{item.title}</span>
                 </a>

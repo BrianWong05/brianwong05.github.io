@@ -1,9 +1,7 @@
 import * as React from "react";
 import { ModeToggle } from "./mode-toggle";
 
-interface IHeaderProps {}
-
-const Header: React.FunctionComponent<IHeaderProps> = (props) => {
+const Header: React.FunctionComponent = () => {
   return (
     <>
       <div className="flex justify-center items-center fixed top-3 w-full gap-3 sm:justify-center z-50">

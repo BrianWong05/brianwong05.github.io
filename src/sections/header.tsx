@@ -6,7 +6,7 @@ interface ISectionHeaderProps {
   description: string;
 }
 
-const SectionHeader: React.FunctionComponent<ISectionHeaderProps> = (props: ISectionHeaderProps) => {
+const SectionHeader: React.FunctionComponent<ISectionHeaderProps> = (props) => {
   return (
     <>
       <div className="flex justify-center">

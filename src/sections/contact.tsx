@@ -2,9 +2,7 @@ import { Button } from "@/components/ui/button";
 import * as React from "react";
 import { GoArrowUpRight } from "react-icons/go";
 
-interface IContactSectionProps {}
-
-const ContactSection: React.FunctionComponent<IContactSectionProps> = (props) => {
+const ContactSection: React.FunctionComponent = () => {
   return (
     <div className="mx-6 py-16 flex pt-10 lg:pb-20 lg:mx-24">
       <div className="lg:w-full bg-gradient-to-r dark:from-[#5693d9] dark:to-[#692ccd] from-[#5f5cee] to-[#add3e8] rounded-3xl py-8 px-10 text-center md:text-left">

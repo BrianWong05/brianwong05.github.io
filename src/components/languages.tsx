@@ -1,8 +1,6 @@
 import * as React from "react";
 import { ReactTyped } from "react-typed";
 
-interface ILanguagesProps {}
-
 const languages = [
   {
     language: "English",
@@ -22,7 +20,7 @@ const languages = [
   },
 ];
 
-const Languages: React.FunctionComponent<ILanguagesProps> = (props) => {
+const Languages: React.FunctionComponent = () => {
   const [display, setDisplay] = React.useState("Hello, I am Brian Wong.");
   console.log(display);
   return (

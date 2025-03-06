@@ -1,13 +1,11 @@
 import * as React from "react";
 import SectionHeader from "@/sections/header";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import ToolboxItems from "@/components/toolboxItems";
 import HobbyItems from "@/components/hobbyItems";
 import Languages from "@/components/languages";
 
-interface IAboutSectionProps {}
-
-const AboutSection: React.FunctionComponent<IAboutSectionProps> = (props: IAboutSectionProps) => {
+const AboutSection: React.FunctionComponent = () => {
   const constraintRef = React.useRef(null);
   return (
     <div className="py-16 lg:py-24">
