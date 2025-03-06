@@ -42,7 +42,7 @@ const Languages: React.FunctionComponent<ILanguagesProps> = (props) => {
           );
         })}
       </nav>
-      <div className="p-6 flex">
+      <div className="p-6 ml-4 flex">
         <ReactTyped strings={[display]} typeSpeed={60} />
       </div>
     </div>
