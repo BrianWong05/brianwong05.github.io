@@ -10,7 +10,7 @@ const SectionHeader: React.FunctionComponent<ISectionHeaderProps> = (props: ISec
   return (
     <>
       <div className="flex justify-center">
-        <p className="uppercase font-semibold tracking-widest text-center bg-gradient-to-r from-[#254a7b] to-[#5693d9] dark:bg-gradient-to-r dark:from-[#6496d8] dark:to-[#adc8e8] text-transparent bg-clip-text">
+        <p className="uppercase font-semibold tracking-widest text-center bg-gradient-to-r from-[#254a7b] to-[#5693d9] dark:from-[#6496d8] dark:to-[#adc8e8] text-transparent bg-clip-text">
           {props.header}
         </p>
       </div>
