@@ -1,14 +1,16 @@
 import * as React from "react";
 import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 interface ILayoutProps {}
 
 const Layout: React.FunctionComponent<ILayoutProps> = ({ children }) => {
   return (
-    <>
+    <div className="overflow-clip">
       <Header />
       {children}
-    </>
+      <Footer />
+    </div>
   );
 };
 
