@@ -5,11 +5,10 @@ import ToolboxItems from "@/components/toolboxItems";
 import HobbyItems from "@/components/hobbyItems";
 import Languages from "@/components/languages";
 
-const toolboxItems = [];
-
 interface IAboutSectionProps {}
 
 const AboutSection: React.FunctionComponent<IAboutSectionProps> = (props: IAboutSectionProps) => {
+  const constraintRef = React.useRef(null);
   return (
     <div className="py-16 lg:py-24">
       <SectionHeader
@@ -43,8 +42,14 @@ const AboutSection: React.FunctionComponent<IAboutSectionProps> = (props: IAbout
             </CardHeader>
             <CardContent className="p-0 -mt-6">
               <div>
-                <ToolboxItems className="mt-6 overflow-x-clip" />
-                <ToolboxItems className="mt-6 overflow-x-clip" itemWrapperClassName="-translate-x-1/2" />
+                <ToolboxItems
+                  className="mt-6 overflow-x-clip"
+                  itemWrapperClassName="animate-moveLeft [animation-duration:15s]"
+                />
+                <ToolboxItems
+                  className="mt-6 overflow-x-clip"
+                  itemWrapperClassName="animate-moveRight [animation-duration:20s]"
+                />
               </div>
             </CardContent>
           </Card>
@@ -59,8 +64,8 @@ const AboutSection: React.FunctionComponent<IAboutSectionProps> = (props: IAbout
                 <p>Discover my passions outside the digital world.</p>
               </CardDescription>
             </CardHeader>
-            <CardContent className="p-0 flex-1 relative">
-              <HobbyItems />
+            <CardContent className="p-0 flex-1 relative" ref={constraintRef}>
+              <HobbyItems constraintRef={constraintRef} />
             </CardContent>
           </Card>
           <Card className="h-[320px] p-0 bg-secondary/20 flex flex-col md:col-span-3 xl:col-span-1">

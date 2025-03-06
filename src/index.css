@@ -88,6 +88,27 @@
   --color-sidebar-ring: hsl(var(--sidebar-ring));
 }
 
+@theme {
+  --animate-moveLeft: moveLeft 1s linear infinite;
+  @keyframes moveLeft {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  --animate-moveRight: moveRight 1s linear infinite;
+  @keyframes moveRight {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

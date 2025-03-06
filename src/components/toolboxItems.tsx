@@ -16,15 +16,21 @@ const ToolboxItems: React.FunctionComponent<IToolboxItemProps> = (props: IToolbo
       )}
     >
       <div className={cn("flex flex-none gap-6 py-0.5 pr-6", props.itemWrapperClassName)}>
-        {toolboxItems.map((item) => {
+        {[...new Array(2)].fill(0).map((_, index) => {
           return (
-            <div
-              key={item.title}
-              className="inline-flex items-center gap-4 py-2 px-3 outline-2 outline-foreground/30 rounded-lg"
-            >
-              <img src={item.icon} alt={item.title} className="size-10" />
-              <span className="font-semibold">{item.title}</span>
-            </div>
+            <React.Fragment key={index}>
+              {toolboxItems.map((item) => {
+                return (
+                  <div
+                    key={item.title}
+                    className="inline-flex items-center gap-4 py-2 px-3 outline-2 outline-foreground/30 rounded-lg"
+                  >
+                    <img src={item.icon} alt={item.title} className="size-10" />
+                    <span className="font-semibold">{item.title}</span>
+                  </div>
+                );
+              })}
+            </React.Fragment>
           );
         })}
       </div>
