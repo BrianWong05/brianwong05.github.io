@@ -11,7 +11,7 @@ const HobbyItems: React.FunctionComponent<IHobbyItemsProps> = (props) => {
           <div
             key={hobby.title}
             className={
-              "inline-flex items-center gap-2 px-6 bg-gradient-to-r dark:from-[#5693d9] dark:to-[#2663b4] from-[#5c9bee] to-[#adc8e8] rounded-full py-1.5 absolute"
+              "inline-flex items-center gap-2 px-6 bg-gradient-to-r dark:from-[#5693d9] dark:to-[#7638db] from-[#7a79e2] to-[#a7d0e6] rounded-full py-1.5 absolute"
             }
             style={{ left: hobby.left, top: hobby.top }}
           >
