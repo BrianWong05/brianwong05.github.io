@@ -8,6 +8,10 @@ import CIcon from "@/assets/icons/c.svg";
 import CppIcon from "@/assets/icons/cpp.svg";
 import PythonIcon from "@/assets/icons/python.svg";
 import FigmaIcon from "@/assets/icons/figma.svg";
+import JavaIcon from "@/assets/icons/java.svg";
+import MatlabIcon from "@/assets/icons/matlab.svg";
+import mysqlIcon from "@/assets/icons/mysql.svg";
+import FirebaseIcon from "@/assets/icons/firebase.svg";
 
 export const toolboxItems = [
   {
@@ -49,5 +53,21 @@ export const toolboxItems = [
   {
     title: "Figma",
     icon: FigmaIcon,
+  },
+  {
+    title: "Java",
+    icon: JavaIcon,
+  },
+  {
+    title: "Matlab",
+    icon: MatlabIcon,
+  },
+  {
+    title: "mySQL",
+    icon: mysqlIcon,
+  },
+  {
+    title: "Firebase",
+    icon: FirebaseIcon,
   },
 ];
