@@ -44,7 +44,10 @@ const ProjectSection: React.FunctionComponent = () => {
                       <ul className="flex flex-col gap-4 mt-4 md:mt-5">
                         {project.results.map((result) => {
                           return (
-                            <li className="flex w-full gap-2 text-sm md:text-base text-foreground/70 lg:block">
+                            <li
+                              key={result.title}
+                              className="flex w-full gap-2 text-sm md:text-base text-foreground/70 lg:block"
+                            >
                               {result.title}
                             </li>
                           );
