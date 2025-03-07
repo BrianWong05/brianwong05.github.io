@@ -13,7 +13,7 @@ const ContactSection: React.FunctionComponent = () => {
               Ready to start your next project? Let’s make it happen! Get in touch to explore how I can assist you.
             </p>
           </div>
-          <Button className="h-12 text-gray-50/90 bg-[#201352] hover:bg-[#341f85] hover:text-white rounded-2xl">
+          <Button className="cursor-pointer h-12 text-gray-50/90 bg-[#201352] hover:bg-[#341f85] hover:text-white rounded-2xl">
             <div className="inline-flex items-center px-6 h-12 gap-2">
               <span className="font-semibold">Contact Me</span>
               <GoArrowUpRight className="size-4" />
