@@ -1,9 +1,10 @@
 import * as React from "react";
 import { projectList } from "@/assets/projectList";
 import { Button } from "@/components/ui/button";
-import { ExternalLinkIcon } from "lucide-react";
+import { ExternalLinkIcon, MoveRight } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import SectionHeader from "@/sections/header";
+import { Link } from "react-router-dom";
 
 const ProjectSection: React.FunctionComponent = () => {
   return (
@@ -14,10 +15,10 @@ const ProjectSection: React.FunctionComponent = () => {
           title="Highlighted Work"
           description="Explore how I’ve turned ideas into captivating digital solutions."
         />
-        <div className="flex flex-col mt-10 gap-20 m-8 md:mt-20 lg:w-full xl:w-330 xl:mx-auto lg:[&>div:nth-child(odd)>div]:left-30 lg:[&>div:nth-child(even)>div]:right-30 lg:[&>div:nth-child(odd)>div]:text-left lg:[&>div:nth-child(even)>div]:text-right lg:[&>div:nth-child(odd)>a>img]:right-30 lg:[&>div:nth-child(even)>a>img]:left-30 lg:[&>div:nth-child(even)>div>div>div>div>a]:right-8">
+        <div className="flex flex-col mt-10 gap-20 m-8 md:mt-20 md:mx-20 lg:mx-0 lg:w-full xl:max-w-330 xl:mx-auto lg:[&>div:nth-child(odd)>div]:left-30 lg:[&>div:nth-child(even)>div]:right-30 lg:[&>div:nth-child(odd)>div]:text-left lg:[&>div:nth-child(even)>div]:text-right lg:[&>div:nth-child(odd)>a>img]:right-30 lg:[&>div:nth-child(even)>a>img]:left-30 lg:[&>div:nth-child(even)>div>div>div>div>a]:right-8">
           {projectList.slice(0, 3).map((project) => {
             return (
-              <div key={project.title} className="relative bg-background lg:flex lg:mb-90">
+              <div key={project.title} className="relative bg-background lg:flex lg:mb-95">
                 <a href={project.link} target="_blank">
                   <img
                     src={project.image}
@@ -77,6 +78,14 @@ const ProjectSection: React.FunctionComponent = () => {
             );
           })}
         </div>
+      </div>
+      <div className="px-8 md:flex md:justify-center lg:mt-25">
+        <Link to="/projects">
+          <Button className="h-12 w-full rounded-xl font-semibold inline-flex gap-2 mt-8 md:w-60 cursor-pointer transition-all duration-200">
+            <span>Discover More</span>
+            <MoveRight className="size-4" strokeWidth="3" />
+          </Button>
+        </Link>
       </div>
     </div>
   );
