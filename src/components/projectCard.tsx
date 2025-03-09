@@ -15,12 +15,12 @@ const ProjectCard: React.FunctionComponent<IProjectCardProps> = ({
   project,
   isSticky = false,
   index = 0,
-  gap = 45,
+  gap = 110,
 }) => {
   return (
     <div className={`relative p-8 ${isSticky && "sticky"}`} style={{ top: `${index * gap + 50}px` }}>
       <div className="absolute -z-51 m-8 inset-0 bg-background rounded-2xl" />
-      <Card className="p-8 bg-secondary/20 hover:bg-secondary/40 transition duration-200 curso-poi md:pt-12 md:px-10 lg:h-100 cursor-pointer group ">
+      <Card className="p-8 bg-secondary/20 hover:bg-secondary/40 transition duration-200 curso-poi md:pt-12 md:px-10 lg:h-108 cursor-pointer group ">
         <a href={project.link} target="_blank">
           <CardHeader className="px-0">
             <CardDescription>
