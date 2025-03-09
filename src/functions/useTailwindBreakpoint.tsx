@@ -21,9 +21,9 @@ export function useTailwindBreakpoint() {
   const [breakpoint, setBreakpoint] = React.useState(() => getBreakpoint(window.innerWidth));
 
   React.useEffect(() => {
-    function handleResize() {
+    const handleResize = () => {
       setBreakpoint(getBreakpoint(window.innerWidth));
-    }
+    };
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
