@@ -22,7 +22,7 @@ const languages = [
 
 const Languages: React.FunctionComponent = () => {
   const [display, setDisplay] = React.useState("Hello, I am Brian Wong.");
-  console.log(display);
+
   return (
     <div>
       <nav className="flex justify-center items-center gap-4 lg:gap-6 w-full flex-wrap">
