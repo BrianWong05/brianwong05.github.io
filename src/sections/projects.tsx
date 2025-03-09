@@ -20,9 +20,10 @@ const ProjectSection: React.FunctionComponent = () => {
         <div className="grid grid-cols-1 mt-10 gap-6 my-8 md:mt-20 md:mx-20 lg:mx-0 lg:px-15 lg:w-full xl:max-w-330 xl:mx-auto">
           {projectList.slice(0, 3).map((project, index) => {
             let gap = 0;
-            if (breakpoint === "sm") gap = 110;
+            if (breakpoint === "sm" || breakpoint === "xs") gap = 110;
             else if (breakpoint === "md") gap = 145;
             else gap = 170;
+            console.log(breakpoint, gap);
             return <ProjectCard key={index} project={project} isSticky={true} index={index} gap={gap} />;
           })}
         </div>
