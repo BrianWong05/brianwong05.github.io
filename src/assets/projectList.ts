@@ -1,4 +1,6 @@
-export const projectList = [
+import { project } from "@/types";
+
+export const projectList: project[] = [
   {
     company: "Myself",
     year: 2025,
@@ -18,5 +20,41 @@ export const projectList = [
     ],
     link: "https://mumsa.au/",
     image: "/images/MyMSA.jpg",
+  },
+  {
+    company: "Pui Ching",
+    year: 2022,
+    title: "52th Sport Day Website",
+    results: [
+      { title: "Detailed event information for members" },
+      { title: "Amazing membership system" },
+      { title: "Conected to Apple Wallet" },
+    ],
+    link: "https://m52.puiching.edu.mo/",
+    image: "/images/m52.jpg",
+  },
+  {
+    company: "Pui Ching",
+    year: 2022,
+    title: "51th Sport Day Website",
+    results: [
+      { title: "Detailed event information for members" },
+      { title: "Amazing membership system" },
+      { title: "Conected to Apple Wallet" },
+    ],
+    link: "https://m51.puiching.edu.mo/",
+    image: "/images/m51.jpg",
+  },
+  {
+    company: "Pui Ching",
+    year: 2020,
+    title: "50th Sport Day Website",
+    results: [
+      { title: "Detailed event information for members" },
+      { title: "Amazing membership system" },
+      { title: "Conected to Apple Wallet" },
+    ],
+    link: "https://m50.puiching.edu.mo/",
+    image: "/images/m50.jpg",
   },
 ];
