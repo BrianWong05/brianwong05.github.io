@@ -14,7 +14,7 @@ const AboutSection: React.FunctionComponent = () => {
         title="A Peek Into My Story"
         description="Discover my passion, my skills, and what excites me."
       />
-      <div className="mt-16 m-8 flex flex-col gap-8 lg:mx-24">
+      <div className="mt-16 m-8 md:mx-12 flex flex-col gap-8 lg:mx-24">
         <div className="flex flex-col md:grid md:grid-cols-7 xl:grid-cols-3 gap-8">
           <Card className="h-[320px] p-0 bg-secondary/20 flex flex-col md:col-span-3 xl:col-span-1">
             <CardHeader className="px-8 pt-8">
