@@ -3,6 +3,11 @@ import * as React from "react";
 import { GoArrowUpRight } from "react-icons/go";
 
 const ContactSection: React.FunctionComponent = () => {
+  const mailto = "mailto:brian.wongti5@gmail.com?subject=subject&body=";
+  const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    window.location.href = mailto;
+  };
   return (
     <div className="mx-6 py-16 flex pt-10 lg:pb-20 lg:mx-24">
       <div className="lg:w-full bg-gradient-to-r dark:from-[#5693d9] dark:to-[#692ccd] from-[#5f5cee] to-[#add3e8] rounded-3xl py-8 px-10 text-center md:text-left">
@@ -13,7 +18,10 @@ const ContactSection: React.FunctionComponent = () => {
               Ready to start your next project? Let’s make it happen! Get in touch to explore how I can assist you.
             </p>
           </div>
-          <Button className="cursor-pointer h-12 text-gray-50/90 bg-[#201352] hover:bg-[#341f85] hover:text-white rounded-2xl">
+          <Button
+            className="cursor-pointer h-12 text-gray-50/90 bg-[#201352] hover:bg-[#341f85] hover:text-white rounded-2xl"
+            onClick={handleSubmit}
+          >
             <div className="inline-flex items-center px-6 h-12 gap-2">
               <span className="font-semibold">Contact Me</span>
               <GoArrowUpRight className="size-4" />
